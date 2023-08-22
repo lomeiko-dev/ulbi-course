@@ -1,0 +1,10 @@
+.navbar{
+  a{
+    margin: 0 10px;
+    transition: .2s all;
+  }
+  a:hover{
+    color: red;
+    border-bottom: 2px solid red;
+  }
+}
