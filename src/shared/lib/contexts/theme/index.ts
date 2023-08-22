@@ -1,5 +1,5 @@
 import {createContext} from "react";
-import {enumTheme} from "shared/config";
+import {enumTheme} from "shared/config/themes";
 
 interface IThemeContext {
     theme: enumTheme,

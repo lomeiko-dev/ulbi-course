@@ -1,5 +1,5 @@
 import {RouteProps} from "react-router-dom";
-import {pathRoute} from "shared/config";
+import {pathRoute} from "shared/config/path-routes";
 import {AboutPageLazy} from "pages/about";
 import {MainPageLazy} from "pages/main";
 

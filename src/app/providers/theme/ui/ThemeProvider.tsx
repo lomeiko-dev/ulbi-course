@@ -1,6 +1,7 @@
 import {ReactNode, useMemo, useState} from 'react';
 import {themeContext} from "shared/lib/contexts";
-import {LOCAL_STORAGE_THEME_KEY, enumTheme} from "shared/config";
+import {LOCAL_STORAGE_THEME_KEY} from "shared/config/local-storage-keys";
+import {enumTheme} from "shared/config/themes";
 
 const initialState = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) ?? enumTheme.light;
 
