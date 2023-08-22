@@ -10,7 +10,6 @@ type typeProps = {
 export const ThemeProvider = ({children}: typeProps) => {
     const [theme, setTheme] = useState<enumTheme>(initialState as enumTheme);
 
-
     const memoProps = useMemo(() => ({
         theme: theme,
         setTheme: setTheme,

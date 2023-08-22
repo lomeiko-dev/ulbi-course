@@ -5,4 +5,7 @@ interface IThemeContext {
     theme: enumTheme,
     setTheme: (theme: enumTheme) => void,
 }
-export const themeContext = createContext<IThemeContext>({theme: enumTheme.light, setTheme: () => {}});
+export const themeContext = createContext<IThemeContext>({
+    theme: enumTheme.light,
+    setTheme: () => {}
+});

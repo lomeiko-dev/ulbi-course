@@ -1,6 +1,6 @@
 import style from "./Header.module.scss";
 import {NavBar} from "../../navbar";
-import {useTheme} from "shared/lib/hooks/theme/useTheme.ts";
+import {useTheme} from "shared/lib/hooks";
 
 export const Header = () => {
     const {toggleTheme} = useTheme();
