@@ -1,1 +1,1 @@
-export {AboutPageLazy} from "./ui/AboutPage.lazy.tsx";
+export { AboutPageLazy } from './ui/AboutPage.lazy.tsx'

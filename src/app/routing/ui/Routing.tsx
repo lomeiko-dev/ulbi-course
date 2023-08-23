@@ -1,14 +1,15 @@
-import {Suspense} from "react";
-import {Route, Routes} from "react-router-dom";
-import {routes} from "app/routing/lib/utils/routes.tsx";
+import React, { Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { routes } from 'app/routing/lib/utils/routes.tsx'
+import { PageLoader } from 'widgets/page-loader'
 
-export const Routing = () => {
-    return (
-        <Suspense fallback="Loading...">
-            <Routes>
-                {routes.map(route =>
-                    <Route key={route.path} path={route.path} element={route.element}/>)}
-            </Routes>
-        </Suspense>
-    );
-};
+export const Routing: React.FC = () => {
+  return (
+      <Suspense fallback={<PageLoader/>}>
+          <Routes>
+              {routes.map(route =>
+                  <Route key={route.path} {...route}/>)}
+          </Routes>
+      </Suspense>
+  )
+}

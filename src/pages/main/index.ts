@@ -1,1 +1,1 @@
-export {MainPageLazy} from "./ui/MainPage.lazy.tsx";
+export { MainPageLazy } from './ui/MainPage.lazy.tsx'

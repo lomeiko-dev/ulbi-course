@@ -1,19 +1,24 @@
-import style from "./Layout.module.scss";
-import {ReactNode} from "react";
-import {Header} from "./header";
+import React, { type ReactNode, Suspense } from 'react'
+import style from './Layout.module.scss'
+import { Header } from './header'
+import { SideBar } from './sidebar'
 
-type typeProps = {
-    children: ReactNode;
-    className: string,
+interface ILayout {
+  children: ReactNode
+  className: string
 }
-export const Layout = ({children, className}: typeProps) => {
-    return (
-        <div className={className}>
-            <Header/>
-            <div className={style.container}>
-                {children}
-            </div>
 
+export const Layout: React.FC<ILayout> = ({ children, className }) => {
+  return (
+        <div className={className}>
+            {/* for i18n */}
+            <Suspense fallback="Translate...">
+                <Header/>
+                <div className={style.content_page}>
+                    <SideBar/>
+                    {children}
+                </div>
+            </Suspense>
         </div>
-    );
+  )
 }

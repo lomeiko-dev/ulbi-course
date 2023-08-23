@@ -1,9 +1,11 @@
-const MainPage = () => {
-    return (
+import React from 'react'
+
+const MainPage: React.FC = () => {
+  return (
         <div>
             Main...
         </div>
-    );
+  )
 }
 
-export default MainPage;
+export default MainPage

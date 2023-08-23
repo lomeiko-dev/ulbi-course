@@ -1,14 +1,11 @@
-import {useContext} from "react";
-import {themeContext} from "shared/lib/contexts";
+import React from 'react'
 
-const AboutPage = () => {
-    const {theme} = useContext(themeContext);
-    console.log(theme);
-    return (
+const AboutPage: React.FC = () => {
+  return (
         <div>
             ABOUT...
         </div>
-    );
+  )
 }
 
-export default AboutPage;
+export default AboutPage

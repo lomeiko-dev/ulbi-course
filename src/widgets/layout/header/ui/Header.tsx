@@ -1,18 +1,20 @@
-import style from "./Header.module.scss";
-import {NavBar} from "../../navbar";
-import {useTheme} from "shared/lib/hooks";
+import React from 'react'
+import style from './Header.module.scss'
+import { NavBar } from '../../navbar'
+import { ThemeSwitcher } from 'shared/ui/themeSwicher/ThemeSwitcher.tsx'
+import { useTranslation } from 'react-i18next'
+import { LangSwitcher } from 'shared/ui/langSwitcher/LangSwitcher.tsx'
 
-export const Header = () => {
-    const {toggleTheme} = useTheme();
-
-    return (
+export const Header: React.FC = () => {
+  const { t } = useTranslation()
+  return (
         <div className={style.header}>
-            <div>
-                <h1>Продвинутый Frontend</h1>
-            </div>
+            <h1>{t('title')}</h1>
 
             <NavBar/>
-            <button onClick={toggleTheme}>change themes</button>
+
+            <ThemeSwitcher/>
+            <LangSwitcher/>
         </div>
-    );
-};
+  )
+}

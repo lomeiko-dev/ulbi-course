@@ -5,8 +5,16 @@
 }
 
 a{
+  display: flex;
+  align-items: center;
   font: var(--font-s);
   color: var(--text-color);
   text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
